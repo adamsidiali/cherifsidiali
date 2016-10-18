@@ -1,0 +1,251 @@
+html,body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Noto Sans', sans-serif;
+  background: linear-gradient(to left, rgba(255,255,255,0.25), #fff), url('https://dl.dropboxusercontent.com/s/lgg93i8q0ab79rk/dad.jpg') no-repeat right center scroll;
+  background-size: auto 100%;
+}
+
+div.section {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+div.section .fp-tableCell {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#fullpage img {
+  width: 120px;
+  margin: auto auto 0 40px;
+  display: none;
+}
+
+#fullpage h1.name {
+  margin: auto auto 20px 80px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  font-size: 10vw;
+  color: #111;
+  font-weight: 700;
+  letter-spacing: 14px;
+  line-height: 1;
+  text-transform: uppercase;
+  font-family: 'Raleway';
+  text-align: left;
+}
+#fullpage h4.subname {
+  margin: 0px auto 10px 80px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  font-size: 1.5em;
+  color: #111;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  font-family: 'Raleway';
+  text-align: left;
+}
+
+#fullpage a.email-btn {
+  margin: 20px auto auto 100px;
+  display: block;
+  flex: 0 0 auto;
+  text-decoration: none;
+  color: #111;
+  border: 2px solid #111;
+  padding: 15px 20px;
+  box-sizing: border-box;
+  font-weight: 700;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  transition: 150ms ease-out;
+}
+
+#fullpage a.email-btn:hover {
+  background-color: #111;
+  color: #fff;
+  transition: 150ms ease-out;
+}
+
+#fullpage a.email-btn:hover i {
+  color: #fff;
+  transition: 150ms ease-out;
+}
+
+#fullpage a.email-btn i {
+  font-size: 1.1em;
+  margin: auto 0 auto 10px;
+  color: #111;
+}
+
+div.navbar-bg {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+}
+
+ul.navbar {
+  list-style: none;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  margin: 0;
+  position: fixed;
+  bottom: 20px;
+  left: 0;
+  padding: 0;
+  z-index: 99999;
+}
+
+ul.navbar li {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  flex: 0 0 auto;
+  padding: 0;
+  margin: auto 10px;
+  box-sizing: border-box;
+}
+
+ul.navbar li.icon-only {
+  margin: auto 10px;
+}
+
+ul.navbar li.icon-only.first {
+  margin-left: 40px;
+}
+
+ul.navbar li a {
+  text-transform: uppercase;
+  font-size: 0.9em;
+  font-weight: 700;
+  color: #444;
+  text-decoration: none;
+  flex: 0 0 auto;
+  margin: auto;
+}
+
+ul.navbar li a i {
+  font-size: 1.1em;
+  margin: auto 5px auto 0;
+  color: #444;
+}
+
+span.copyright {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  margin: 0;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  color: #333;
+  padding: 20px;
+  font-size: 0.8em;
+  font-weight: 700;
+  box-sizing: border-box;
+  z-index: 99999;
+}
+
+.mobile-nav-toggle {
+  display: none;
+  margin: 0;
+  position: fixed;
+  bottom: 15px;
+  left: 20px;
+  padding: 0;
+  color: #111;
+  line-height: 1;
+  z-index: 9999999;
+}
+
+.mobile-nav-toggle i {
+  font-size: 1.75em;
+}
+
+@media all and (max-width: 768px) {
+  .mobile-nav-toggle {
+    display: block;
+    z-index: 99999;
+  }
+
+  div.navbar-bg {
+    display: block;
+    opacity: 0;
+    pointer-events: none;
+    background: rgba(0,0,0,0.5);
+    transition: 100ms ease-out;
+
+  }
+  div.navbar-bg.open {
+    opacity: 1;
+    pointer-events: auto;
+    transition: 100ms ease-out;
+
+  }
+
+  ul.navbar {
+    left: 0;
+    width: 100vw;
+    bottom: -100%;
+    padding-bottom: 60px;
+    height: auto;
+    background: #fff;
+    flex-flow: column nowrap;
+    z-index: 9999;
+    transition: 100ms ease-out;
+  }
+  ul.navbar.open {
+    bottom: 0;
+    transition: 100ms ease-out;
+  }
+
+  ul.navbar li {
+    flex: 0 0 auto;
+    width: 100%;
+    margin: 0px auto;
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+  }
+
+  ul.navbar li.icon-only.first {
+    margin-left: 10px;
+  }
+
+  #fullpage h1.name {
+    margin-left: 40px;
+    font-weight: 900;
+    font-size: 13vw;
+  }
+
+  #fullpage h4.subname {
+    margin: 0px auto 10px 40px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    font-size: 1em;
+    color: #111;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    font-family: 'Raleway';
+    text-align: left;
+  }
+
+  #fullpage a.email-btn {
+    margin-left: 60px;
+  }
+}

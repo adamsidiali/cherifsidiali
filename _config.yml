@@ -1,0 +1,10 @@
+# Site settings
+title: Cherif Sidiali
+email: cherif@sidia.li
+description: > # Writer, professor, and speaker on foreign policy and the global impact.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://cherif.sidia.li" # the base hostname & protocol for your site
+twitter_username: cherifsidiali
+
+# Build settings
+markdown: kramdown

@@ -1,0 +1,90 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <div class="navbar-bg"> </div>
+  <ul class="navbar">
+    <li class="icon-only first">
+      <a href="#home">
+        <i class="material-icons" style="font-size: 1.5em">home</i>
+      </a>
+    </li>
+    <li>
+      <a href="#articles/0">
+        <i class="material-icons">chrome_reader_mode</i>
+        Articles
+      </a>
+    </li>
+    <li>
+      <a href="#bio/0">
+        <i class="material-icons">person</i>
+        Bio
+      </a>
+    </li>
+    <li>
+      <a href="#resources/0">
+        <i class="material-icons">language</i>
+        Resources
+      </a>
+    </li>
+    <li class="icon-only">
+      <a href="https://twitter.com/cherifsidiali">
+        <i class="fa fa-twitter" style="font-size: 1.5em"></i>
+      </a>
+    </li>
+    <li class="icon-only">
+      <a href="https://facebook.com/SidialiC">
+        <i class="fa fa-facebook" style="font-size: 1.5em"></i>
+      </a>
+    </li>
+    <li class="icon-only">
+      <a href="https://linkedin.com/in/cherifsidiali">
+        <i class="fa fa-linkedin" style="font-size: 1.5em"></i>
+      </a>
+    </li>
+  </ul>
+
+  <span class="mobile-nav-toggle">
+    <i class="material-icons">menu</i>
+  </span>
+
+  <div id="fullpage" style="width: 100vw; height: 100vh;">
+    <div class="section" data-anchor="home">
+      <img src="https://dl.dropboxusercontent.com/s/g75h3x3swec2pqj/hcafe-alpha.png" alt="logo" />
+      <h1 class="name">Dr.<br />Cherif<br />Sidiali</h1>
+      <h4 class="subname">Writer, professor, and speaker on<br />foreign policy and the global impact.</h4>
+      <a class="email-btn"href="mailto:cherif@sidia.li">
+        Get In Touch
+        <i class="material-icons">chat_bubble</i>
+      </a>
+    </div>
+
+    <div class="section" data-anchor="articles" style="background-color: #ddd;">
+
+      {% for article in site.data.articles %}
+        <div class="slide" data-anchor="{{ article.slug }}" style="background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url('{{ article.image }}') no-repeat center center scroll; background-size: cover;">
+          <h1 class="article-title">{{ article.title }}</h1>
+          <a class="read-now" href="{{ article.link }}">Read Now</a>
+        </div>
+      {% endfor %}
+
+    </div>
+
+    <div id="biosection" class="section" data-anchor="bio" style="background-color: #fff; width: 100%;">
+      <div class="bio-content">
+        <h3>About Dr. Cherif Sidiali</h3>
+        <div class="bio-img"> </div>
+        <p>Dr. Sidiali started his educational journey in 2000 pursuing an MBA which he obtained in 2002 with a focus in International Marketing from City University. After finishing his MBA, he began simultaneously working on a Master’s in Public Policy and Administration as well as a PhD in Public Policy with a focus on international Relations and policy Analysis. Dr. Sidiali completed both degrees in 2008.</p>
+        <p>His teaching career started while pursuing his education. First, teaching MPA as and an assistant professor at Walden University. After graduating with his PhD, he was hired on as professor in the School of Technology and Management to teach leadership and Management. He taught management and leadership for 8 years in addition to the administrative responsibilities as lead faculty.</p>
+        <p>During the time he taught for Walden University, Dr. Sidiali was recognized as the subject matter expert in leadership and management with publication in the leadership field.</p>
+        <p>Currently, Dr. Sidiali is a professor at Champlain College, Excelsior College and lecturer at the University of Washington. He teaches creative leadership at Champlain where students learn to recognize the role of imagination in transformational leaders’ approaches to growth and change, as well as the benefits of creativity in problem-solving. As a lecturer at the University of Washington, he teaches his students about organizational behavior and different aspects of organizations’ operations, such as culture, management, leadership, human capital, politics and power, and conflict and negotiations.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <span class="copyright">&copy; 2016 Cherif Sidiali</span>
+
+</div>
